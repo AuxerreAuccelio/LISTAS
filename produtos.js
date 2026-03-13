@@ -1,4 +1,4 @@
-let produtos = [
+export let produtos = [
   {
     id: 1,
     nome: "Coca-cola 2L",
@@ -950,25 +950,34 @@ let produtos = [
 //   custoEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }),
 // );
 
-let custoEstoque = produtos.reduce(
-  (acumulador, produto) =>
-    acumulador + (produto.preco_venda - produto.preco_compra) * produto.estoque,
-  //acumulador + produto.preco_compra * produto.estoque,
-  0,
-);
-console.log(
-  custoEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }),
-);
+// let custoEstoque = produtos.reduce(
+//   (acumulador, produto) =>
+//     acumulador + (produto.preco_venda - produto.preco_compra) * produto.estoque,
+//   //acumulador + produto.preco_compra * produto.estoque,
+//   0,
+// );
+// console.log(
+//   custoEstoque.toLocaleString("pt-BR", { style: "currency", currency: "BRL" }),
+// );
 
-let quantidadeEstoque = produtos.reduce(
-  (acumulador, produto) => acumulador + produto.estoque,
-  0,
-);
-console.log(quantidadeEstoque + " quantidades");
+// let quantidadeEstoque = produtos.reduce(
+//   (acumulador, produto) => acumulador + produto.estoque,
+//   0,
+// );
+// console.log(quantidadeEstoque + " quantidades");
 
-let valorMedio = produtos.reduce(
-  (acumulador, produto) => acumulador + produto.preco_compra / produto.estoque,
-  0,
-);
+// let valorMedio = produtos.reduce(
+//   (acumulador, produto) => acumulador + produto.preco_compra / produto.estoque,
+//   0,
+// );
 
-console.log(valorMedio.toFixed(2) + " valor médio de cada item");
+// console.log(valorMedio.toFixed(2) + " valor médio de cada item");
+
+// let estoque = produtos.filter((produto) => produto.estoque <= 50);
+// console.table(estoque);
+
+// let estoqueFind = produtos.find((produto) => produto.estoque <= 50);
+// console.table(estoqueFind);
+
+let cliente45 = produtos.find((produto) => produto.id === 45);
+console.log(cliente45);
